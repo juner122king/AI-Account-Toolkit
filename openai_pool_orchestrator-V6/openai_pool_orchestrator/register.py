@@ -1368,7 +1368,10 @@ def run(
         except Exception:
             csrf_token = ""
         if not csrf_token:
-            emitter.error("获取 CSRF Token 失败", step="oauth_init")
+            emitter.error(
+                f"获取 CSRF Token 失败（状态码 {csrf_resp.status_code}）: {str(csrf_resp.text or '')[:200]}",
+                step="oauth_init",
+            )
             return None
 
         # 3c: 生成 Device ID
@@ -2118,4 +2121,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

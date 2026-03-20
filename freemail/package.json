@@ -1,0 +1,20 @@
+{
+  "name": "freemail-worker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Freemail deployment tooling for Cloudflare Workers",
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "scripts": {
+    "dev": "wrangler dev",
+    "check": "wrangler deploy --dry-run",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail",
+    "d1:init": "wrangler d1 execute TEMP_MAIL_DB --remote --file=./d1-init.sql",
+    "d1:tables": "wrangler d1 execute TEMP_MAIL_DB --remote --command \"SELECT name FROM sqlite_master WHERE type='table' ORDER BY name\""
+  },
+  "devDependencies": {
+    "wrangler": "3.88.0"
+  }
+}
