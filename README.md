@@ -20,9 +20,23 @@ AI-Account-Toolkit/
 ├── openai_pool_orchestrator_v5/ # OpenAI 账号池管理工具
 ├── openai_pool_orchestrator-V6/ # OpenAI 账号池编排器（新版本）
 ├── ClashVerge_              # ClashVerge 非港轮询脚本
-├── ABCard/                  # ChatGPT Business/Plus 自动开通工具（子模块）
-├── any-auto-register/        # 多平台账号自动注册工具（子模块）
-└── cloudflare_temp_email/    # Cloudflare 临时邮箱服务（子模块）
+├── openai_register/         # OpenAI 注册脚本
+└── packages/                # 分类子模块目录
+    ├── openai/              # OpenAI 相关子模块
+    │   ├── ABCard/          # ChatGPT Business/Plus 自动开通工具
+    │   ├── chatgpt-creator/ # ChatGPT 账号创建工具
+    │   └── openai-oauth/    # OpenAI OAuth 认证工具
+    ├── gemini/              # Gemini 相关子模块
+    │   └── gemini-balance-do/ # Gemini 余额查询工具
+    ├── codex/               # Codex 相关子模块
+    │   └── codex-lb/        # Codex 负载均衡工具
+    ├── claude/              # Claude 相关子模块
+    │   └── claude-key-switch/ # Claude 密钥切换工具
+    ├── email/               # 邮箱相关子模块
+    │   └── cloudflare_temp_email/ # Cloudflare 临时邮箱服务
+    └── general/             # 通用工具子模块
+        ├── any-auto-register/ # 多平台账号自动注册工具
+        └── Ultimate-openai-gemini-claude-api-key-scraper/ # 多平台 API 密钥抓取工具
 ```
 
 ## 项目导航
@@ -169,7 +183,7 @@ AI-Account-Toolkit/
 - `core/` - 核心功能
 - `platforms/` - 各平台实现
 
-**使用指南**：[any-auto-register/README.md](any-auto-register/README.md)
+**使用指南**：[packages/general/any-auto-register/README.md](packages/general/any-auto-register/README.md)
 
 ### 14. ABCard - ChatGPT Business/Plus 自动开通工具
 
@@ -182,9 +196,9 @@ AI-Account-Toolkit/
 - `admin_cli.py` - 兑换码管理工具
 - `config.example.json` - 配置模板
 
-**使用指南**：[ABCard/README.md](ABCard/README.md)
+**使用指南**：[packages/openai/ABCard/README.md](packages/openai/ABCard/README.md)
 
-### 14. cloudflare_temp_email - Cloudflare 临时邮箱服务
+### 15. cloudflare_temp_email - Cloudflare 临时邮箱服务
 
 **功能**：基于 Cloudflare 免费服务构建的临时邮箱服务，支持邮件收发、附件处理等功能。
 
@@ -193,7 +207,7 @@ AI-Account-Toolkit/
 - `public/` - 前端静态文件
 - `wrangler.toml` - Cloudflare Worker 配置
 
-**使用指南**：[cloudflare_temp_email/README.md](cloudflare_temp_email/README.md)
+**使用指南**：[packages/email/cloudflare_temp_email/README.md](packages/email/cloudflare_temp_email/README.md)
 
 ## 快速开始
 
@@ -214,7 +228,7 @@ done
 
 ### 2. 初始化子模块
 
-本项目包含三个子模块，需要初始化：
+本项目包含多个子模块，需要初始化：
 
 ```bash
 # 初始化子模块
@@ -223,9 +237,15 @@ git submodule update
 ```
 
 子模块列表：
-- `any-auto-register/` - 多平台账号自动注册工具
-- `cloudflare_temp_email/` - Cloudflare 临时邮箱服务
-- `ABCard/` - ChatGPT Business/Plus 自动开通工具
+- `packages/general/any-auto-register/` - 多平台账号自动注册工具
+- `packages/email/cloudflare_temp_email/` - Cloudflare 临时邮箱服务
+- `packages/openai/ABCard/` - ChatGPT Business/Plus 自动开通工具
+- `packages/openai/chatgpt-creator/` - ChatGPT 账号创建工具
+- `packages/openai/openai-oauth/` - OpenAI OAuth 认证工具
+- `packages/gemini/gemini-balance-do/` - Gemini 余额查询工具
+- `packages/codex/codex-lb/` - Codex 负载均衡工具
+- `packages/claude/claude-key-switch/` - Claude 密钥切换工具
+- `packages/general/Ultimate-openai-gemini-claude-api-key-scraper/` - 多平台 API 密钥抓取工具
 
 ### 3. 配置设置
 
@@ -294,5 +314,5 @@ python any-auto-register/main.py
 
 ---
 
-**更新日期**：2026-03-19
+**更新日期**：2026-03-20
 **版本**：2.0.0
