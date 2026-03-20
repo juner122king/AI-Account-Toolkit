@@ -24,7 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Token 导出功能
   - Sub2Api 平台上传支持
 
-- **cloudflare_temp_email** (submodule) - Cloudflare 临时邮箱服务
+- **packages/email/cloudflare_temp_email** (submodule) - Cloudflare 临时邮箱服务
   - 基于 Cloudflare 免费服务构建
   - Rust WASM 邮件解析，高性能
   - AI 邮件识别，自动提取验证码
@@ -32,7 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Telegram Bot 集成
   - 用户管理，支持 OAuth2、Passkey 登录
 
-- **ABCard** (submodule) - ChatGPT Business/Plus 自动开通工具
+- **packages/openai/ABCard** (submodule) - ChatGPT Business/Plus 自动开通工具
   - 全自动注册 ChatGPT 账号
   - 开通 Business (5席位 $0) 或 Plus (个人版 $0)
   - Xvfb + Chrome 自动支付，绕过 hCaptcha
@@ -40,20 +40,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - 兑换码管控系统
 
 - **OpenAI 相关子模块**
-  - **chatgpt-creator** (submodule) - ChatGPT 账号创建工具
-  - **openai-oauth** (submodule) - OpenAI OAuth 认证工具
+  - **packages/openai/chatgpt-creator** (submodule) - ChatGPT 账号创建工具
+  - **packages/openai/openai-oauth** (submodule) - OpenAI OAuth 认证工具
 
 - **Gemini 相关子模块**
-  - **gemini-balance-do** (submodule) - Gemini 余额查询工具
+  - **packages/gemini/gemini-balance-do** (submodule) - Gemini 余额查询工具
 
 - **Codex 相关子模块**
-  - **codex-lb** (submodule) - Codex 负载均衡工具
+  - **packages/codex/codex-lb** (submodule) - Codex 负载均衡工具
 
 - **Claude 相关子模块**
-  - **claude-key-switch** (submodule) - Claude 密钥切换工具
+  - **packages/claude/claude-key-switch** (submodule) - Claude 密钥切换工具
 
 - **通用工具子模块**
-  - **Ultimate-openai-gemini-claude-api-key-scraper** (submodule) - 多平台 API 密钥抓取工具
+  - **packages/general/any-auto-register** (submodule) - 多平台账号自动注册工具
+  - **packages/general/Ultimate-openai-gemini-claude-api-key-scraper** (submodule) - 多平台 API 密钥抓取工具
 
 ### Updated
 
